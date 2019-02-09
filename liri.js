@@ -214,15 +214,3 @@ function song()
       } 
     });
 }
-
-function log(text)
-{
-    // append text to file given 
-    fs.appendFile("log.txt", text + "\n", function(error)
-    {
-        if(error)
-        {
-            console.log(error);
-        }
-    });
-}
