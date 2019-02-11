@@ -86,7 +86,7 @@ function movie()
         log(infoText);
         infoText = "Imdb Rating: " + responce.data.imdbRating;
         log(infoText);
-        infoText = "Rotten Tomatos Rating: ";
+        infoText = "Rotten Tomatos Rating: " + responce.data.Ratings[1].Value;
         log(infoText);
         infoText = "Country: " + responce.data.Country;
         log(infoText);
@@ -99,7 +99,7 @@ function movie()
         console.log("Title: " + responce.data.Title);
         console.log("Realease Year: " + responce.data.Year);
         console.log("Imdb Rating: " + responce.data.imdbRating);
-        console.log("Rotten Tomatos Rating: ");
+        console.log("Rotten Tomatos Rating: " + responce.data.Ratings[1].Value);
         console.log("Country: " + responce.data.Country);
         console.log("Language: " + responce.data.Language);
         console.log("Plot: " + responce.data.Plot);
