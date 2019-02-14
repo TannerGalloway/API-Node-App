@@ -45,11 +45,11 @@ switch (command)
     break;
 
     case "concert-this":
-    if(commandValue === "")
+    if(commandValue.length === 0)
     {
         return console.log("No artist was provided");
     }
-    if(doWhatItSaysCount === false)
+    if(!doWhatItSaysCount)
     {
         commandValue = commandValue.join(" ");
     }
@@ -62,7 +62,12 @@ switch (command)
     break;
 
     case "spotify-this-song":
-    if(doWhatItSaysCount === false)
+    if(commandValue.length === 0)
+    {
+        commandValue = "the sign ace of base";    
+    }
+    else
+    if(!doWhatItSaysCount)
     {
         commandValue = commandValue.join(" ");
     }
@@ -140,9 +145,11 @@ function concert()
                 var date = responce.data[info].datetime.split("T");
                 infoText = moment(date[0]).format("MM/DD/YYYY");
                 log(infoText);
-
+                log("=====================================================");
                 //format date
-                console.log(moment(date[0]).format("MM/DD/YYYY") + "\n");
+                console.log(moment(date[0]).format("MM/DD/YYYY"));
+
+                console.log("=====================================================");
 
             }
         }
