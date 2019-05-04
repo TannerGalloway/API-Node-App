@@ -1,4 +1,4 @@
-# liri-node-app
+# API Node app
 
 This app allows users to input the below commands into the termanial and get a proper responce back based on the command given:
 
